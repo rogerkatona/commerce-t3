@@ -1,5 +1,6 @@
 export { default as Swatch } from './Swatch'
 export { default as ProductView } from './ProductView'
+export { default as ProductViewMain } from './ProductViewMain'
 export { default as ProductCard } from './ProductCard'
 export { default as ProductCardSmall } from './ProductCardSmall'
 export { default as ProductCardFeature } from './ProductCardFeature'

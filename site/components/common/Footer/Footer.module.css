@@ -3,11 +3,14 @@
 }
 
 .link {
-  & > svg {
-    @apply transform duration-75 ease-linear;
-  }
+  @apply inline-flex items-center leading-6
+  uppercase text-xs text-newGunmetal.500 cursor-pointer;
+}
 
-  &:hover > svg {
-    @apply scale-110;
-  }
+.link:hover {
+  @apply text-gray-100 border-b-newGunmetal.500;
+}
+
+.link:focus {
+  @apply outline-none underline;
 }

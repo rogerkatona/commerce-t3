@@ -109,7 +109,7 @@ const ProductCardSmall: FC<Props> = ({
               />
             )}
             <div className={`${+product.id % 2 === 0  ? 'bg-newGunmetal.800' : 'bg-newGunmetal.600'} `}>
-            <div className={`flex max-w-7xl mx-auto md:py-24 flex-col md:pt-24 py-12 ${+product.id % 2 === 0  ? 'bg-newGunmetal.800 lg:flex-row' : 'bg-newGunmetal.600 lg:flex-row-reverse'}`}>
+            <div className={`flex max-w-7xl mx-auto md:py-24 flex-col md:pt-24 p-12 ${+product.id % 2 === 0  ? 'bg-newGunmetal.800 lg:flex-row' : 'bg-newGunmetal.600 lg:flex-row-reverse'}`}>
               <div className={s.imageContainer}>
                 {product?.images && (
                   <div>
@@ -123,7 +123,7 @@ const ProductCardSmall: FC<Props> = ({
                   </div>
                 )}
               </div>
-                <div className={`p-6 pt-3 md:py-0 ${+product.id % 2 === 0  ? 'lg:pl-12' : 'lg:pr-12'} `}>
+                <div className={`p-0 pt-6 ${+product.id % 2 === 0  ? 'lg:pl-12' : 'lg:pr-12'} `}>
                   <div className='font-bebasNeue text-4xl text-gray-300'>
                     {product.name}
                   </div>

@@ -1,11 +1,11 @@
 :root {
   --primary: #ffffff;
   --primary-2: #f1f3f5;
-  --secondary: #000000;
-  --secondary-2: #111;
+  --secondary: rgba(31, 41, 55, 1);
+  --secondary-2: rgba(31, 41, 55, 1);
   --selection: var(--cyan);
   --text-base: #000000;
-  --text-primary: #000000;
+  --text-primary: rgba(31, 41, 55, 1);
   --text-secondary: white;
   --hover: rgba(0, 0, 0, 0.075);
   --hover-1: rgba(0, 0, 0, 0.15);
@@ -30,13 +30,13 @@
   --accent-7: #333333;
   --accent-8: #111111;
   --accent-9: #000;
-  --font-sans: -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue',
+  --font-sans: 'Helvetica Neue', -apple-system, system-ui, BlinkMacSystemFont,
     'Helvetica', sans-serif;
 }
 
 [data-theme='dark'] {
-  --primary: #000000;
-  --primary-2: #111;
+  --primary: rgba(31, 41, 55, 1);
+  --primary-2: rgba(31, 41, 55, 1);
   --secondary: #ffffff;
   --secondary-2: #f1f3f5;
   --hover: rgba(255, 255, 255, 0.075);

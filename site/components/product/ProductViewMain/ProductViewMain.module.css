@@ -1,10 +1,10 @@
 .root {
-  @apply relative grid items-start gap-1 grid-cols-1 overflow-y-hidden ;
-  min-height: auto;
+  @apply relative grid items-start gap-1 grid-cols-1 bg-gray-800 overflow-y-hidden ;
+  min-height: 1200px;
 }
 .main {
-  @apply relative px-0 pb-0 box-border flex flex-col col-span-1;
-  min-height: 450px;
+  @apply relative px-0 pb-0 flex flex-col col-span-1;
+  min-height: 550px;
 }
 
 .sidebar {
@@ -12,20 +12,20 @@
 }
 
 .sliderContainer {
-  @apply flex overflow-x-hidden ;
+  @apply flex  overflow-x-hidden ;
 }
 
 .imageContainer {
-  @apply text-center relative ;
+  @apply text-center relative bg-gray-800 pt-6 ;
 }
 
-/*.imageContainer > span {
+.imageContainer > span {
   height: 100% !important;
 }
 
 .sliderContainer .img {
-  @apply w-full h-full max-h-full object-cover;
-}*/
+  @apply w-full h-full max-h-full  object-contain;
+}
 
 .button {
   width: 100%;

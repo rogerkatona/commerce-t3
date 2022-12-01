@@ -4,7 +4,7 @@ import s from './ProductViewMain.module.css'
 import { FC } from 'react'
 import type { Product } from '@commerce/types/product'
 import usePrice from '@framework/product/use-price'
-import { ProductSlider, ProductCard } from '@components/product'
+import { ProductSliderMain } from '@components/product'
 import { Container, Text } from '@components/ui'
 import { SEO } from '@components/common'
 import ProductSidebarMain from '../ProductSidebarMain'
@@ -35,7 +35,7 @@ const ProductViewMain: FC<ProductViewProps> = ({ product, relatedProducts }) => 
         </div>
 
       </div>
-      <Container className="mx-auto max-w-7xl lg:px-0 px-3 " clean>
+      <Container className="mx-auto max-w-7xl " clean>
         <div className={cn(s.root, 'fit')}>
           <div className={cn(s.main, 'fit')}>
 {/*            <ProductTag
@@ -44,21 +44,21 @@ const ProductViewMain: FC<ProductViewProps> = ({ product, relatedProducts }) => 
               fontSize={32}
             />*/}
             <div className={s.sliderContainer}>
-              <ProductSlider key={product.id}>
+              <ProductSliderMain key={product.id}>
                 {product.images.map((image, i) => (
                   <div key={image.url} className={s.imageContainer}>
                     <Image
                       className={s.img}
                       src={image.url!}
                       alt={image.alt || 'Product Image'}
-                      width={600}
-                      height={600}
+                      width={750}
+                      height={750}
                       priority={i === 0}
                       quality="85"
                     />
                   </div>
                 ))}
-              </ProductSlider>
+              </ProductSliderMain>
             </div>
             {process.env.COMMERCE_WISHLIST_ENABLED && (
               <WishlistButton

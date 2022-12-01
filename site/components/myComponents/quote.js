@@ -17,7 +17,7 @@ export default function Quote(props) {
                         key={filteredItem.id}
                         className="flex flex-row md:px-0 px-6 py-16 bg-newGunmetal.50">
 
-                        <section className="max-w-7xl mx-auto md:w-2/3">
+                        <section className="max-w-7xl mx-auto lg:w-2/3 lg:px-0 px-6">
                             <div className="flex flex-col justify-center items-center">
                                 <div className="flex flex-col  text-newGunmetal.700">
                                     <div className="text-center font-light text-xl">&quot;{filteredItem.text}&quot;</div>

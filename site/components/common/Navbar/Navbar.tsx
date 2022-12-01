@@ -16,9 +16,9 @@ interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = ({ links }) => (
   <NavbarRoot>
-    <Container clean className="mx-auto max-w-7xl px-6">
+    <Container clean className="mx-auto max-w-7xl lg:px-0 px-6">
       <div className={s.nav}>
-        <div className="flex items-center flex-1">
+        <div className="flex items-center">
           <Link href="/">
             <a className={s.logo} aria-label="Logo">
               <Logo />

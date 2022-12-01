@@ -9,6 +9,8 @@ import { Logo, Container } from '@components/ui'
 import { I18nWidget } from '@components/common'
 import ThemeSwitcher from '@components/ui/ThemeSwitcher'
 import s from './Footer.module.css'
+import Modal from "components/myComponents/modal";
+import useModal from "lib/useModal";
 
 interface Props {
   className?: string
@@ -26,67 +28,65 @@ const links = [
 const Footer: FC<Props> = ({ className, pages }) => {
   const { sitePages } = usePages(pages)
   const rootClassName = cn(s.root, className)
+  const {isShowing, toggle} = useModal();
 
   return (
     <footer className={rootClassName}>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accent-2 py-12 text-primary bg-primary transition-colors duration-150">
-          <div className="col-span-1 lg:col-span-2">
+        <div className="flex flex-col justify-center md:items-center md:px-0 px-6 bg-medBlue.900 py-48 space-y-6">
+          <div className="">
             <Link href="/">
-              <a className="flex flex-initial items-center font-bold md:mr-24">
-                <span className="rounded-full border border-accent-6 mr-2">
+              <a className="flex ">
+                <span>
                   <Logo />
                 </span>
-                <span>ACME</span>
               </a>
             </Link>
           </div>
-          <div className="col-span-1 lg:col-span-7">
-            <div className="grid md:grid-rows-4 md:grid-cols-3 md:grid-flow-col">
-              {[...links, ...sitePages].map((page) => (
-                <span key={page.url} className="py-3 md:py-0 md:pb-4">
-                  <Link href={page.url!}>
-                    <a className="text-accent-9 hover:text-accent-6 transition ease-in-out duration-150">
-                      {page.name}
-                    </a>
-                  </Link>
-                </span>
-              ))}
-            </div>
+          <div className="">
+            <nav className="space-x-6">
+              <Link href="/products">
+                <a className={s.link}>Products</a>
+              </Link>
+              <Link href="/services">
+                <a className={s.link}>Services & Customization</a>
+              </Link>
+              <Link href="/technology">
+                <a className={s.link}>Technology & Patent</a>
+              </Link>
+
+              {/*              {links?.map((l) => (
+                <Link href={l.href} key={l.href}>
+                  <a className={s.link}>{l.label}</a>
+                </Link>
+              ))}*/}
+              <Link href="/About">
+                <a className={s.link}>About</a>
+              </Link>
+              <Link
+                href="https://www.instagram.com/the_real_fry_tech_llc/">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  className={s.link}>Instagram</a>
+              </Link>
+            </nav>
           </div>
-          <div className="col-span-1 lg:col-span-3 flex items-start lg:justify-end text-primary">
-            <div className="flex space-x-4 items-center h-10">
-              <ThemeSwitcher />
-              <I18nWidget />
-              <a
-                className={s.link}
-                aria-label="Github Repository"
-                href="https://github.com/vercel/commerce"
-              >
-                <Github />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="pt-6 pb-10 flex flex-col md:flex-row justify-between items-center space-y-4 text-accent-6 text-sm">
           <div>
-            <span>&copy; 2020 ACME, Inc. All rights reserved.</span>
+            <Link href=''>
+              <button
+                onClick={toggle}
+                className="hover:bg-rust.800 hover:text-white.100 hover:border-newGunmetal.300 text-xs text-newGunmetal.500 uppercase px-3 py-2  border border-newGunmetal.500 rounded-lg">
+                Contact
+              </button>
+            </Link>
           </div>
-          <div className="flex items-center text-primary text-sm">
-            <span className="text-primary">Created by</span>
-            <a
-              rel="noopener noreferrer"
-              href="https://vercel.com"
-              aria-label="Vercel.com Link"
-              target="_blank"
-              className="text-primary"
-            >
-              <Vercel
-                className="inline-block h-6 ml-3 text-primary"
-                alt="Vercel.com Logo"
-              />
-            </a>
-          </div>
+          <section>
+            <Modal
+              isShowing={isShowing}
+              hide={toggle}
+            />
+          </section>
         </div>
       </Container>
     </footer>

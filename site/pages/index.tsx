@@ -1,6 +1,6 @@
 import commerce from '@lib/api/commerce'
 import { Layout } from '@components/common'
-import { ProductCard } from '@components/product'
+import { ProductCardFeature } from '@components/product'
 import HeroIndex from "components/myComponents/hero_index"
 import Features from "components/myComponents/features";
 import Quote from "components/myComponents/quote";
@@ -49,7 +49,7 @@ export default function Home({products,}: InferGetStaticPropsType<typeof getStat
           key={product.id}
           className="bg-newGunmetal.800">
           <div className='max-w-7xl mx-auto md:pb-24 pb-12 md:pt-0 pt-12'>
-            <ProductCard
+            <ProductCardFeature
               product={product}
             />
           </div>

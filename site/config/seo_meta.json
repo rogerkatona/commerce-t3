@@ -1,10 +1,10 @@
 {
-  "title": "ACME Storefront | Powered by Next.js Commerce",
+  "title": "Frytech",
   "titleTemplate": "%s - ACME Storefront",
-  "description": "Next.js Commerce - https://www.nextjs.org/commerce",
+  "description": "Frytech Ecommerce",
   "openGraph": {
-    "title": "ACME Storefront | Powered by Next.js Commerce",
-    "description": "Next.js Commerce - https://www.nextjs.org/commerce",
+    "title": "Frytech",
+    "description": "Frytech Ecommerce",
     "type": "website",
     "url": "https://nextjs.org/commerce",
     "site_name": "Next.js Commerce",

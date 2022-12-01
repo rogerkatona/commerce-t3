@@ -1,7 +1,8 @@
 {
   "provider": "bigcommerce",
   "features": {
-    "wishlist": true,
+    "search": false,
+    "wishlist": false,
     "customerAuth": true
   }
 }

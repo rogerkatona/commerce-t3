@@ -25,14 +25,35 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
             </a>
           </Link>
           <nav className={s.navMenu}>
-            <Link href="/search">
-              <a className={s.link}>All</a>
+            <Link href="/products">
+              <a className={s.link}>Products</a>
             </Link>
-            {links?.map((l) => (
+            <Link href="/services">
+              <a className={s.link}>Services & Customization</a>
+            </Link>
+            <Link href="/technology">
+              <a className={s.link}>Technology & Patent</a>
+            </Link>
+            {/*              {links?.map((l) => (
+                <Link href={l.href} key={l.href}>
+                  <a className={s.link}>{l.label}</a>
+                </Link>
+              ))}*/}
+            <Link href="/about">
+              <a className={s.link}>About</a>
+            </Link>
+            <Link
+              href="https://www.instagram.com/the_real_fry_tech_llc/">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className={s.link}>Instagram</a>
+            </Link>
+{/*            {links?.map((l) => (
               <Link href={l.href} key={l.href}>
                 <a className={s.link}>{l.label}</a>
               </Link>
-            ))}
+            ))}*/}
           </nav>
         </div>
         {process.env.COMMERCE_SEARCH_ENABLED && (

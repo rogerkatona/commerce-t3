@@ -1,5 +1,5 @@
 .root {
-  @apply sticky top-0 bg-primary z-40 transition-all duration-150;
+  @apply sticky top-0 bg-primary z-40 transition-all duration-150 bg-newYellow.500;
   min-height: 74px;
 }
 
@@ -13,23 +13,17 @@
 
 .link {
   @apply inline-flex items-center leading-6
-  transition ease-in-out duration-75 cursor-pointer
-  text-accent-5;
+  uppercase text-xs text-newGunmetal.500 cursor-pointer;
 }
 
 .link:hover {
-  @apply text-accent-9;
+  @apply text-gray-100 border-b-newGunmetal.500;
 }
 
 .link:focus {
-  @apply outline-none text-accent-8;
+  @apply outline-none underline;
 }
 
 .logo {
-  @apply cursor-pointer rounded-full border transform duration-100 ease-in-out;
-
-  &:hover {
-    @apply shadow-md;
-    transform: scale(1.05);
-  }
+  @apply cursor-pointer;
 }

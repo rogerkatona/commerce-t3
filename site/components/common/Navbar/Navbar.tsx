@@ -16,7 +16,7 @@ interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = ({ links }) => (
   <NavbarRoot>
-    <Container clean className="mx-auto max-w-8xl px-6">
+    <Container clean className="mx-auto max-w-7xl px-6">
       <div className={s.nav}>
         <div className="flex items-center flex-1">
           <Link href="/">
@@ -34,11 +34,6 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
             <Link href="/technology">
               <a className={s.link}>Technology & Patent</a>
             </Link>
-            {/*              {links?.map((l) => (
-                <Link href={l.href} key={l.href}>
-                  <a className={s.link}>{l.label}</a>
-                </Link>
-              ))}*/}
             <Link href="/about">
               <a className={s.link}>About</a>
             </Link>

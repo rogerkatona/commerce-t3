@@ -51,11 +51,11 @@ const ProductSidebarMain: FC<ProductSidebarProps> = ({ product, className }) => 
 
   return (
     <div className={className}>
-      <ProductOptions
+{/*      <ProductOptions
         options={product.options}
         selectedOptions={selectedOptions}
         setSelectedOptions={setSelectedOptions}
-      />
+      />*/}
       <div className='font-bebasNeue text-5xl text-gray-300 pt-6 lg:pl-0 pl-6'>
         {product.name}
       </div>

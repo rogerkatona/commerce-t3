@@ -56,17 +56,17 @@ const ProductSidebarMain: FC<ProductSidebarProps> = ({ product, className }) => 
         selectedOptions={selectedOptions}
         setSelectedOptions={setSelectedOptions}
       />
-      <div className='font-bebasNeue text-5xl text-gray-300 pt-6 lg:pl-0 pl-3'>
+      <div className='font-bebasNeue text-5xl text-gray-300 pt-6 lg:pl-0 pl-6'>
         {product.name}
       </div>
-      <div className={`font-bebasNeue text-xl text-gray-400 pb-6 ${+product.id === 165  ? 'hidden' : 'block'} `}>
+      <div className={`font-bebasNeue text-xl text-gray-400 pb-6  lg:pl-0  pl-6 ${+product.id === 165  ? 'hidden' : 'block'} `}>
         {`${price} ${product.price?.currencyCode}`}
       </div>
       <Text
-        className="py-3 w-full max-w-xl md:px-0 px-3"
+        className=" w-full max-w-xl lg:px-0  px-6"
         html={product.descriptionHtml || product.description}
       />
-      <div className="flex flex-row justify-between items-center lg:pl-0  pl-3">
+      <div className="flex flex-row justify-between items-center lg:pl-0  pl-6">
         <Rating value={4} />
         <div className="text-accent-6 pr-1 font-medium text-sm">36 reviews</div>
       </div>

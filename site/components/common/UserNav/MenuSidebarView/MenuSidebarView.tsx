@@ -17,21 +17,39 @@ export default function MenuSidebarView({
         <nav>
           <ul>
             <li className={s.item} onClick={() => closeSidebar()}>
-              <Link href="/search">
-                <a>All</a>
+              <Link href="/index">
+                <a className={s.link}>Home</a>
               </Link>
             </li>
-            {links.map((l: any) => (
-              <li
-                key={l.href}
-                className={s.item}
-                onClick={() => closeSidebar()}
-              >
-                <Link href={l.href}>
-                  <a>{l.label}</a>
-                </Link>
-              </li>
-            ))}
+            <li className={s.item} onClick={() => closeSidebar()}>
+              <Link href="/products">
+                <a className={s.link}>Products</a>
+              </Link>
+            </li>
+            <li className={s.item} onClick={() => closeSidebar()}>
+              <Link href="/services">
+                <a className={s.link}>Services & Customization</a>
+              </Link>
+            </li>
+            <li className={s.item} onClick={() => closeSidebar()}>
+              <Link href="/technology">
+                <a className={s.link}>Technology & Patent</a>
+              </Link>
+            </li>
+            <li className={s.item} onClick={() => closeSidebar()}>
+              <Link href="/about">
+                <a className={s.link}>About</a>
+              </Link>
+            </li>
+            <li className={s.item} onClick={() => closeSidebar()}>
+              <Link
+                href="https://www.instagram.com/the_real_fry_tech_llc/">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  className={s.link}>Instagram</a>
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

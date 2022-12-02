@@ -121,10 +121,9 @@ const ProductCardFeature: FC<Props> = ({
                       alt={product.name || 'Product Image'}
                       className={s.productImage}
                       src={product.images[0]?.url || placeholderImg}
-                      height={540}
-                      width={540}
+                      height={1200}
+                      width={1200}
                       quality="85"
-                      layout="responsive"
                       {...imgProps}
                     />
                   </div>

@@ -12,7 +12,7 @@
 }
 
 .sliderContainer {
-  @apply flex  overflow-x-hidden ;
+  @apply overflow-x-hidden md:px-0 px-6 ;
 }
 
 .imageContainer {

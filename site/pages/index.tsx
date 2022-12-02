@@ -10,10 +10,10 @@ import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 
 
 export async function getStaticProps({
-                                       preview,
-                                       locale,
-                                       locales,
-                                     }: GetStaticPropsContext) {
+ preview,
+ locale,
+ locales,
+ }: GetStaticPropsContext) {
   const config = { locale, locales }
   const productsPromise = commerce.getAllProducts({
     variables: { first: 6 },
@@ -60,9 +60,6 @@ export default function Home({products,}: InferGetStaticPropsType<typeof getStat
       <Promo id={0} />
       <Features  featured="true" type="service"/>
       <Promo id={1}/>
-
-
-
 
     </>
   )

@@ -1,5 +1,5 @@
 .root {
-  @apply relative grid gap-1 grid-cols-1 overflow-x-hidden ;
+  @apply relative grid gap-1 grid-cols-1 overflow-x-hidden  ;
   min-height: auto;
 }
 
@@ -55,7 +55,6 @@
 
 .button {
   width: 100%;
-  @apply mx-3
 ;
 }
 

@@ -68,7 +68,7 @@ const ProductSidebarMain: FC<ProductSidebarProps> = ({ product, className }) => 
       />
       <div className="flex flex-row justify-between items-center lg:pl-0  pl-6">
         <Rating value={4} />
-        <div className="text-accent-6 pr-1 font-medium text-sm">36 reviews</div>
+        <div className="text-accent-6 pr-1 font-medium text-sm">38 reviews</div>
       </div>
       <div className={`${+product.id === 165  ? 'hidden' : 'block'} `}>
         {process.env.COMMERCE_CART_ENABLED && (

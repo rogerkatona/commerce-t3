@@ -47,9 +47,6 @@ const CartSidebarView: FC = () => {
           <h2 className="pt-6 text-2xl font-bold tracking-wide text-center">
             Your cart is empty
           </h2>
-          <p className="text-accent-3 px-10 text-center pt-2">
-            Biscuit oat cake wafer icing ice cream tiramisu pudding cupcake.
-          </p>
         </div>
       ) : error ? (
         <div className="flex-1 px-4 flex flex-col justify-center items-center">
@@ -57,7 +54,7 @@ const CartSidebarView: FC = () => {
             <Cross width={24} height={24} />
           </span>
           <h2 className="pt-6 text-xl font-light text-center">
-            We couldn’t process the purchase. Please check your card information
+            We could not process the purchase. Please check your card information
             and try again.
           </h2>
         </div>

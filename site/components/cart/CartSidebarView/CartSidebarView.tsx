@@ -72,9 +72,9 @@ const CartSidebarView: FC = () => {
           <div className="px-4 sm:px-6 flex-1">
             <Link href="/cart">
               <a>
-                <Text variant="sectionHeading" onClick={handleClose}>
+                <div className="font-bebasNeue text-4xl " onClick={handleClose}>
                   My Cart
-                </Text>
+                </div>
               </a>
             </Link>
             <ul className={s.lineItemsList}>

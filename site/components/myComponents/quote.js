@@ -21,7 +21,7 @@ export default function Quote(props) {
                             <div className="flex flex-col justify-center items-center">
                                 <div className="flex flex-col  text-newGunmetal.700">
                                     <div className="text-center font-light text-xl">&quot;{filteredItem.text}&quot;</div>
-                                    <div className="text-center font-light text-lg pt-3"> - {filteredItem.author}, {filteredItem.title}</div>
+                                    <div className="text-center font-light text-lg pt-3"> - {filteredItem.author} {filteredItem.title}</div>
                                 </div>
                             </div>
                         </section>

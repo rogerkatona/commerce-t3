@@ -48,7 +48,7 @@ export default function Cart() {
   }
 
   return (
-    <Container className="grid lg:grid-cols-12 pt-4 gap-20 max-w-7xl mx-auto">
+    <Container className="grid lg:grid-cols-12 pt-12 gap-20 max-w-7xl mx-auto ">
       <div className="lg:col-span-7">
         {isLoading || isEmpty ? (
           <div className="flex-1 px-12 py-24 flex flex-col justify-center items-center ">
@@ -80,8 +80,8 @@ export default function Cart() {
           </div>
         ) : (
           <div className="lg:px-0 sm:px-6 flex-1">
-            <Text variant="pageHeading">My Cart</Text>
-            <Text variant="sectionHeading">Review your Order</Text>
+            <div className="font-bebasNeue text-5xl ">My Cart</div>
+            <div >Review your Order</div>
             <ul className="py-6 space-y-6 sm:py-0 sm:space-y-0 sm:divide-y sm:divide-accent-2 border-b border-accent-2">
               {data!.lineItems.map((item: any) => (
                 <CartItem

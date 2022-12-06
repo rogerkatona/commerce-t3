@@ -17,7 +17,7 @@ const quoteItems = [
         id:2,
         text: "Certainly, I was going to shout Fry Tech out next week anyways. Hands down best customer service experience I've had, maybe ever. Ordered through Instagram Saturday night; my order was waiting on my doorstep when I got off work on Monday. I'm new to this community, but I like it here 🙏🙏\n",
         author: "Patrick",
-        title: 'Customer',
+        title: '',
         src: '/image/icon/quote-image.svg',
     },
 

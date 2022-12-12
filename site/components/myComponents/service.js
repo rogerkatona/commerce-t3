@@ -29,17 +29,29 @@ export default function Service(props) {
                                     <div className='font-bebasNeue text-4xl text-gray-400 font-light border-b'>{filteredItem.number}</div>
                                     <div className='text-2xl text-gray-700 pt-4'>{filteredItem.title}</div>
                                     <p className="pt-2 text-gray-700">{filteredItem.description}</p>
-                                    <p className="pt-2 text-gray-700">{filteredItem.actionDescription}</p>
-                                    <div className={`${filteredItem.isButtonActive === 'true'  ? 'block' : 'hidden'} pt-6`}>
-                                        <Link href={filteredItem.buttonHref}>
-                                            <a
-                                                target={"_blank"}
-                                                rel="noreferrer"
-                                                className="bg-newYellow.800 hover:bg-newYellow.900 hover:text-gray.100 text-xs text-gray-100 uppercase px-4 py-3 rounded-lg">
-                                                {filteredItem.buttonText}
-                                            </a>
-                                        </Link>
+                                    <p className="pt-2 pb-4 text-gray-700">{filteredItem.actionDescription}</p>
+                                  <div className="flex flex-row">
+                                    <div className={`${filteredItem.isButton01Active === 'true'  ? 'block' : 'hidden'}  pr-2`}>
+                                      <a
+                                        target={"_blank"}
+                                        rel="noreferrer"
+                                        href={filteredItem.button01Href}>
+                                        <button className="bg-newYellow.800 hover:bg-newYellow.900 hover:text-gray.100 text-xs text-gray-100 uppercase px-4 py-3 rounded-lg">
+                                          {filteredItem.button01Text}
+                                        </button>
+                                      </a>
                                     </div>
+                                    <div className={`${filteredItem.isButton02Active === 'true'  ? 'block' : 'hidden'}  pr-2`}>
+                                      <a
+                                        target={"_blank"}
+                                        rel="noreferrer"
+                                        href={filteredItem.button02Href}>
+                                        <button className="bg-newYellow.800 hover:bg-newYellow.900 hover:text-gray.100 text-xs text-gray-100 uppercase px-4 py-3 rounded-lg">
+                                          {filteredItem.button02Text}
+                                        </button>
+                                      </a>
+                                    </div>
+                                  </div>
                                 </div>
                             </div>
                     ))}

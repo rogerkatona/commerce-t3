@@ -5,8 +5,8 @@ import HeroIndex from "components/myComponents/hero_index"
 import Features from "components/myComponents/features";
 import Quote from "components/myComponents/quote";
 import Promo from "components/myComponents/promo";
-import Banner from "components/myComponents/banner";
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import Banner from "@components/myComponents/banner";
 
 
 export async function getStaticProps({

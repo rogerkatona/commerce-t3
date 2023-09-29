@@ -9,7 +9,6 @@ import React, {
 import cn from 'clsx'
 import { a } from '@react-spring/web'
 import s from './ProductSliderMain.module.css'
-import ProductSliderControl from '../ProductSliderControl'
 
 interface ProductSliderProps {
   children?: React.ReactNode[]

@@ -56,7 +56,7 @@ const ProductSidebarMain: FC<ProductSidebarProps> = ({ product, className }) => 
         selectedOptions={selectedOptions}
         setSelectedOptions={setSelectedOptions}
       />*/}
-      <div className='font-bebasNeue text-5xl text-gray-300 pt-6 lg:pl-0 pl-6'>
+      <div className='font-bebasNeue text-5xl text-gray-300 pt-12 lg:pl-0 pl-6'>
         {product.name}
       </div>
       <div className={`font-bebasNeue text-xl text-gray-400 pb-6  lg:pl-0  pl-6 ${+product.id === 165  ? 'hidden' : 'block'} `}>
@@ -66,10 +66,6 @@ const ProductSidebarMain: FC<ProductSidebarProps> = ({ product, className }) => 
         className="py-3 w-full max-w-xl lg:pl-0  pl-6"
         html={product.descriptionHtml || product.description}
       />
-      <div className="flex flex-row justify-between items-center lg:pl-0  pl-6">
-        <Rating value={4} />
-        <div className="text-accent-6 pr-1 font-medium text-sm">38 reviews</div>
-      </div>
       <div className={`${+product.id === 165  ? 'hidden' : 'block'} `}>
         {process.env.COMMERCE_CART_ENABLED && (
           <Button

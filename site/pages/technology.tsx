@@ -31,9 +31,9 @@ export default function Services() {
       <header className="bg-hero-technology min-h-screen25vh max-h-screen25vh bg-cover bg-right bg-no-repeat">
         <Hero id={2}/>
       </header>
-      <div className="text-center font-bebasNeue text-6xl text-gray-700 bg-gray-200 py-12">
+{/*      <div className="text-center font-bebasNeue text-6xl text-gray-700 bg-gray-200 py-12">
         Patents
-      </div>
+      </div>*/}
       <Service type="technology" subtype="patent"/>
       <Quote id={3}/>
       <div className="text-center font-bebasNeue text-6xl text-gray-700 bg-gray-200 py-12">

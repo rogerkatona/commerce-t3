@@ -51,9 +51,9 @@ const Footer: FC<Props> = ({ className, pages }) => {
               <Link href="/services">
                 <a className={s.link}>Services & Customization</a>
               </Link>
-              <Link href="/technology">
+{/*              <Link href="/technology">
                 <a className={s.link}>Technology & Patent</a>
-              </Link>
+              </Link>*/}
 
               {/*              {links?.map((l) => (
                 <Link href={l.href} key={l.href}>

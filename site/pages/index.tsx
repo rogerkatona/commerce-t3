@@ -43,7 +43,7 @@ export default function Home({products,}: InferGetStaticPropsType<typeof getStat
   return (
     <>
       <HeroIndex/>
-      <Banner  featured="true" type="banner"/>
+      <Promo id={0} />
       {products.slice(0, 1).map((product: any, i: number) => (
         <div
           key={product.id}
@@ -56,8 +56,7 @@ export default function Home({products,}: InferGetStaticPropsType<typeof getStat
         </div>
       ))}
       <Quote id={0}/>
-      <Features  featured="true" type="technology"/>
-      <Promo id={0} />
+
       <Features  featured="true" type="service"/>
       <Promo id={1}/>
 

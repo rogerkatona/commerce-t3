@@ -1,12 +1,11 @@
 import { FC } from 'react'
 import cn from 'clsx'
-import Link from 'next/link'
 import type { Product } from '@commerce/types/product'
 import s from './ProductCardSmall.module.css'
 import Image, { ImageProps } from 'next/image'
 import WishlistButton from '@components/wishlist/WishlistButton'
 import usePrice from '@framework/product/use-price'
-import {Rating, Text} from "@components/ui";
+import {Text} from "@components/ui";
 
 interface Props {
   className?: string
@@ -101,13 +100,6 @@ const ProductCardSmall: FC<Props> = ({
 
         {variant === 'default' && (
           <>
-                        {process.env.COMMERCE_WISHLIST_ENABLED && (
-              <WishlistButton
-                className={s.wishlistButton}
-                productId={product.id}
-                variant={product.variants[0] as any}
-              />
-            )}
             <div className={`${+product.id % 2 === 0  ? 'bg-newGunmetal.800' : 'bg-newGunmetal.600'} `}>
             <div className={`flex max-w-7xl mx-auto md:py-24 flex-col md:pt-24 p-12 ${+product.id % 2 === 0  ? 'bg-newGunmetal.800 lg:flex-row' : 'bg-newGunmetal.600 lg:flex-row-reverse'}`}>
               <div className={s.imageContainer}>
@@ -134,7 +126,6 @@ const ProductCardSmall: FC<Props> = ({
                     className={`${+product.id === 165  ? 'pt-6' : 'pt-0'} `}
                     html={product.descriptionHtml || product.description}
                   />
-                  <Rating value={4} />
                   <div className="flex flex-row">
                     <div className="pr-2">
                       <a

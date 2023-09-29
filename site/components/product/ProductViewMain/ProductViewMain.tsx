@@ -8,8 +8,6 @@ import { ProductSliderMain } from '@components/product'
 import { Container, Text } from '@components/ui'
 import { SEO } from '@components/common'
 import ProductSidebarMain from '../ProductSidebarMain'
-import Hero from "@components/myComponents/hero";
-import {WishlistButton} from "@components/wishlist";
 
 interface ProductViewProps {
   product: Product
@@ -25,7 +23,7 @@ const ProductViewMain: FC<ProductViewProps> = ({ product, relatedProducts }) => 
 
   return (
     <>
-      <div className="bg-gray-100">
+      <div className="bg-gray-50">
         <div className="flex flex-col justify-center max-w-7xl mx-auto lg:px-0  px-6 py-12">
           <div className="font-bebasNeue md:text-4xl text-3xl uppercase text-gray-700">
             Are you considering a custom design for your gun?
@@ -35,7 +33,7 @@ const ProductViewMain: FC<ProductViewProps> = ({ product, relatedProducts }) => 
         </div>
 
       </div>
-      <Container className="mx-auto max-w-7xl " clean>
+      <Container className="mx-auto max-w-7xl" clean>
         <div className={cn(s.root, 'fit')}>
           <div className={cn(s.main, 'fit')}>
 {/*            <ProductTag
@@ -60,13 +58,6 @@ const ProductViewMain: FC<ProductViewProps> = ({ product, relatedProducts }) => 
                 ))}
               </ProductSliderMain>
             </div>
-            {process.env.COMMERCE_WISHLIST_ENABLED && (
-              <WishlistButton
-                className={s.wishlistButton}
-                productId={product.id}
-                variant={product.variants[0]}
-              />
-            )}
           </div>
 
           <ProductSidebarMain

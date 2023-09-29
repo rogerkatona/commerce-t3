@@ -6,8 +6,8 @@ import s from './ProductCardFeature.module.css'
 import Image, { ImageProps } from 'next/image'
 import WishlistButton from '@components/wishlist/WishlistButton'
 import usePrice from '@framework/product/use-price'
-import ProductTag from '../ProductTag'
-import {Rating, Text} from "@components/ui";
+
+import {Text} from "@components/ui";
 
 interface Props {
   className?: string
@@ -132,7 +132,7 @@ const ProductCardFeature: FC<Props> = ({
               <div className="md:pr-6 md:pl-0 px-6">
                 <div className='text-gray-100'>
                   <Link href="/products">
-                    <a className='hover:underline uppercase text-xs'>/ Products</a>
+                    <span className='hover:underline uppercase text-xs'>/ Products</span>
                   </Link>
                 </div>
 
@@ -146,7 +146,6 @@ const ProductCardFeature: FC<Props> = ({
                   className={`${+product.id === 165  ? 'pt-6' : 'pt-0'} `}
                   html={product.descriptionHtml || product.description}
                 />
-                <Rating value={4} />
                 <div className="flex flex-row">
                   <div className="pr-2">
                     <a

@@ -21,7 +21,7 @@ module.exports = function (task) {
       const swcClientOptions = {
         module: {
           type: 'es6',
-          ignoreDynamic: true,
+          ignoreDynamic: false,
         },
         jsc: {
           loose: true,
@@ -46,7 +46,7 @@ module.exports = function (task) {
       const swcServerOptions = {
         module: {
           type: 'es6',
-          ignoreDynamic: true,
+          ignoreDynamic: false,
         },
         env: {
           targets: {
